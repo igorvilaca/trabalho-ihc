@@ -1,0 +1,14 @@
+a) o contexto da disciplina
+
+
+
+b) desenvolvedores
+Igor Vilaça
+Anderson Miguel de Jesus
+Gustavo Henrique do Carmo Figueiredo
+
+
+c) casos de uso
+Sistema deve permitir o usuário selecionar qual a linha de ônibus a ser exibido o horário
+Sistema deve permitir que o usuário escolha qual o dia(dia útil,feriados,sábados) para a exibição do horário
+Sistema deve permitir o usuário escolher qual a linha de ônibus a ser exibida a rota
