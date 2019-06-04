@@ -3,12 +3,13 @@ a) o contexto da disciplina
 
 
 b) desenvolvedores
-Igor VilaÁa
+Igor Vila√ßa
 Anderson Miguel de Jesus
 Gustavo Henrique do Carmo Figueiredo
 
 
 c) casos de uso
-Sistema deve permitir o usu·rio selecionar qual a linha de Ùnibus a ser exibido o hor·rio
-Sistema deve permitir que o usu·rio escolha qual o dia(dia ˙til,feriados,s·bados) para a exibiÁ„o do hor·rio
-Sistema deve permitir o usu·rio escolher qual a linha de Ùnibus a ser exibida a rota
+Sistema deve permitir o usu√°rio selecionar qual a linha de √¥nibus a ser exibido o hor√°rio
+Sistema deve permitir que o usu√°rio escolha qual o dia(dia √∫til,feriados,s√°bados) para a exibi√ß√£o do hor√°rio
+Sistema deve permitir o usu√°rio escolher qual a linha de √¥nibus a ser exibida a rota
+Sistema deve permitir o usu√°rio comparar hor√°rios entre linhas de onibus
