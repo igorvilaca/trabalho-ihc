@@ -1,0 +1,796 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Radar Bus</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body id ="corpo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menu de opções</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Horários <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rota.html">Rotas</a>
+                </li>                                   
+            </ul>
+        </div>
+    </nav>
+    <div id = "topo"><img src= pics/logo.png alt="Radar Bus" height="240" width="310"></div>
+    <div class="container" id = "principal">    
+        <div class="container" >
+            <div class="row">
+                <div class="col-3">
+                    <label class="classlabel">Linha de Onibus:</label>
+                    <input type="text" list="horarios" name="horarios" id="horariosinput" class="form-control" placeholder="----" >
+                    <datalist id="horarios">
+                        <option value="1100">
+                            <option value="1300">
+                                <option value="2580">
+                                    <option value="2730">
+                                        <option value="7900">                                           
+                                        </datalist> 
+                                    </div>                   
+                                    <div class="col-2"> <button type="button" class="btn btn-secondary btnp" onclick="mostrarRota()">Ver rotas</button>  </div>
+                                    <div class="col"> <button type="button" class="btn btn-secondary btnp" onclick="limparListBox()">Limpar campos</button> </div>       
+                                    <div class="col"> <button type="button" class="btn btn-secondary btnp" onclick="limparTabela()">Limpar tabela</button> </div>                        
+                                </div> 
+                            </div>
+                            <br/>
+                        </div> 
+                        
+                        
+                        <div  >
+                            <br/>                           
+                            
+                            <ul id="ul1100" class="list-group  hide">
+                                <label class="ul1100 hide classlabel">Linha 1100</label>
+                                <li class="list-group-item">Rua Do Ouro, 578</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 540</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 703</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 606</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 814</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 860</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 938</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 1042</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 1120</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 1265</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 1159</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 1107</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 859</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 735</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 621</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 357</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 215</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 1021</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 747 | Escola Estadual Jk Sentido Belo Horizonte</li>
+                                <li class="list-group-item">Rua Bonsucesso, 1165</li>
+                                <li class="list-group-item">Rua Cascadura, 423</li>
+                                <li class="list-group-item">Rua Marechal Deodoro Da Fonseca, 196</li>
+                                <li class="list-group-item">Av. Madureira, 410</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 1013</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 865</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 675</li>
+                                <li class="list-group-item">Rua Sebastião Dos Santos, 108</li>
+                                <li class="list-group-item">Rua Sebastião Dos Santos, 264</li>
+                                <li class="list-group-item">Rua Sebastião Dos Santos, 350</li>
+                                <li class="list-group-item">Rua Sebastião Dos Santos, 458</li>
+                                <li class="list-group-item">Rua Coronel Antônio Pereira De Matos, 245</li>
+                                <li class="list-group-item">Rua Coronel Antônio Pereira De Matos, 53</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 997</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 723</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 487</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 235</li>
+                                <li class="list-group-item">Rua Manjericão, 531 | Escola Estadual P.J.B.P Burnier Sentido Rua Tiradentes</li>
+                                <li class="list-group-item">Rua Tiradentes, 1344</li>
+                                <li class="list-group-item">Rua Tiradentes, 1540 | Nhá Sinhá</li>
+                                <li class="list-group-item">Rua Tiradentes, 1842</li>
+                                <li class="list-group-item">Rua Tiradentes, 1945 | 39º Batalhão Da Polícia Militar</li>
+                                <li class="list-group-item">Rua Tiradentes, 2384</li>
+                                <li class="list-group-item">Rua Tiradentes, 2608</li>
+                                <li class="list-group-item">Rua Tiradentes, 2840</li>
+                                <li class="list-group-item">Rua Tiradentes, 2930</li>
+                                <li class="list-group-item">Rua Mons. João Rodrigues Guimarães, 107</li>
+                                <li class="list-group-item">Av. Babita Camargos, 438 | Praça Dos Trabalhadores Sent. Belo Horizonte</li>
+                                <li class="list-group-item">Av. Babita Camargos, 530</li>
+                                <li class="list-group-item">Av. Babita Camargos, 746 | Garagem Cometa</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1819 | Previdência Social</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1042 | Praça João XXIII</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 380 | General Electric</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 4464 | Itaú Power Shopping Sentido Metrô/Eldorado</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1800 | Leroy Merlin Sentido Estação Eldorado</li>
+                                <li class="list-group-item">Estação Eldorado | Plataforma B7</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1805 | Leroy Merlin</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1000 | Mcdonald's</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 180</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 730 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 980 | Upa Jk</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1520 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2364 | Habib'S/Galeria Eldorado Center</li>
+                                <li class="list-group-item">Avenida João César De Oliveira, 2694 - Drogaria Araújo</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 90</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 230</li>
+                                <li class="list-group-item">Rua Haia, 112</li>
+                                <li class="list-group-item">Av. Londres, 384</li>
+                                <li class="list-group-item">Av. Londres, 680</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2452</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2660</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2370</li>
+                                <li class="list-group-item">Rua Caiapó, 487</li>
+                                <li class="list-group-item">Rua Corcovado, 590</li>
+                                <li class="list-group-item">Rua Corcovado, 850</li>
+                                <li class="list-group-item">Rua Corcovado, 1136</li>
+                                <li class="list-group-item">Rua Corcovado, 1286</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1770</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1954</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1805</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1555</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1155</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 755</li>
+                                <li class="list-group-item">Rua Professor Aureliano Zanon, 405</li>
+                                <li class="list-group-item">Av. José Diniz E Silva, 675</li>
+                                <li class="list-group-item">Av. José Diniz E Silva, 445</li>
+                                <li class="list-group-item">Rua 16, 145</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 178</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 338</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 530</li>
+                                <li class="list-group-item">Rua Otília Costa Peres, 438</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 109</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4747 | Puc Minas Campus Contagem, Acesso 2</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4655 | Parque Fernão Dias</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4585 | Puc Minas Campus Contagem, Acesso 5</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4500</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 2027</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1775</li>
+                                <li class="list-group-item">Rua Corcovado, 1227</li>
+                                <li class="list-group-item">Rua Corcovado, 1157</li>
+                                <li class="list-group-item">Rua Corcovado, 941</li>
+                                <li class="list-group-item">Rua Corcovado, 581</li>
+                                <li class="list-group-item">Rua Caiapó, 450</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 365</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 105</li>
+                                <li class="list-group-item">Av. Londres, 755</li>
+                                <li class="list-group-item">Av. Londres, 431</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3359 | Caixa Econômica Federal</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2959 | Centro De Consultas Especializadas Íria Diniz</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2733 | Correios</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2477 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1215 | Big Shopping</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 881 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 6133 Com Av. João César De Oliveira</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 5875 | Correios</li>
+                                <li class="list-group-item">Rua Marechal Hermes Da Fonseca, 323</li>
+                                <li class="list-group-item">Rua Marechal Hermes Da Fonseca, 73</li>
+                                <li class="list-group-item">Estação Eldorado | Plataforma C2</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 5100 | Belgo 1 (Oposto Ao Itaú Shopping)</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 6941 | Belgo 2</li>
+                                <li class="list-group-item">Rua Antônio Gonçalves Neto, 254 - Polícia Rodoviária Federal</li>
+                                <li class="list-group-item">Av. Babita Camargos, 745 | Praça Da Cemig Sentido Industrial</li>
+                                <li class="list-group-item">Av. Babita Camargos, 463 | Espaço Vip</li>
+                                <li class="list-group-item">Av. Babita Camargos, 131 | Praça Dos Trabalhadores Sent. Industrial</li>
+                                <li class="list-group-item">Rua Mons. João Rodrigues Guimarães, 168</li>
+                                <li class="list-group-item">Rua Tiradentes, 3279</li>
+                                <li class="list-group-item">Rua Tiradentes, 2927 | Bailão Farrinha</li>
+                                <li class="list-group-item">Rua Tiradentes, 2641</li>
+                                <li class="list-group-item">Rua Tiradentes, 2245</li>
+                                <li class="list-group-item">Rua Tiradentes, 2115 | Csu Amazonas</li>
+                                <li class="list-group-item">Rua Tiradentes, 1875</li>
+                                <li class="list-group-item">Rua Tiradentes, 1675 | Madeira Monteiro</li>
+                                <li class="list-group-item">Rua Tiradentes, 1531</li>
+                                <li class="list-group-item">Rua Manjericão, 343</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 170</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 500</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 742</li>
+                                <li class="list-group-item">Rua Das Perpétuas, 1016</li>
+                                <li class="list-group-item">Rua Coronel Antônio Pereira De Matos, 100</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 218</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 308</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 500</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 640</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 880</li>
+                                <li class="list-group-item">Rua Dr. Geraldo Starling Soares, 1054</li>
+                                <li class="list-group-item">Rua Áurea Lemos, 750</li>
+                                <li class="list-group-item">Rua Mal. Deodoro Da Fonseca, 220</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 702 | Escola Estadual Jk Sentido Palmares</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 958 | Supermercado Bh</li>
+                                <li class="list-group-item">Rua Ladainha, 55</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 206</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 344</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 702</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 752</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 864</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 1060</li>
+                                <li class="list-group-item">Av. Pres. Tancredo De Almeida Neves, 1300</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 1109</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 1037</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 949</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 863</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 769</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 755</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 325</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 585</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 206</li>
+                                <li class="list-group-item">Av. Dr. Paulo Souza Lima, 51</li>
+                                <li class="list-group-item">Rua Do Ouro, 578 </li>
+
+
+                            </ul>
+                            <ul id="ul1300" class="list-group hide">
+                                <label class="ul1300 hide classlabel">Linha 1300</label>
+                                <li class="list-group-item"> Avenida Sanitária | Ponto Final Do Palmares 2ª Seção</li>
+                                <li class="list-group-item">Rua Antônio Germano, 850</li>
+                                <li class="list-group-item">Rua Antônio Germano, 928</li>
+                                <li class="list-group-item">Rua Antônio Germano, 1114</li>
+                                <li class="list-group-item">Avenida Das Acácias, 1003</li>
+                                <li class="list-group-item">Avenida Das Acácias, 877</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 52</li>
+                                <li class="list-group-item">Rua Ipê, 25</li>
+                                <li class="list-group-item">Rua Alecrim, 63</li>
+                                <li class="list-group-item">Rua Ângico, 110 | Paróquia São José Operário</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 702</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 575</li>
+                                <li class="list-group-item">Rua Ladainha, 571</li>
+                                <li class="list-group-item">Rua Ladainha, 461</li>
+                                <li class="list-group-item">Rua Ladainha, 243</li>
+                                <li class="list-group-item">Rua Ladainha, 55</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 1021</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 747 | Escola Estadual Jk Sentido Belo Horizonte</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 391</li>
+                                <li class="list-group-item">Rua São Januário, 187</li>
+                                <li class="list-group-item">Rua São Januário, 25</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 937</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 755</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 425</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 285</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 139</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 11</li>
+                                <li class="list-group-item">Rua Das Petúnias, 777</li>
+                                <li class="list-group-item">Rua Dos Cravos, 83</li>
+                                <li class="list-group-item">Rua Manjericão, 1227</li>
+                                <li class="list-group-item">Rua Manjericão, 811</li>
+                                <li class="list-group-item">Rua Manjericão, 531 | Escola Estadual P.J.B.P Burnier Sentido Rua Tiradentes</li>
+                                <li class="list-group-item">Rua Tiradentes, 1344</li>
+                                <li class="list-group-item">Rua Tiradentes, 1540 | Nhá Sinhá</li>
+                                <li class="list-group-item">Rua Tiradentes, 1842</li>
+                                <li class="list-group-item">Rua Tiradentes, 1945 | 39º Batalhão Da Polícia Militar</li>
+                                <li class="list-group-item">Rua Tiradentes, 2384</li>
+                                <li class="list-group-item">Rua Tiradentes, 2608</li>
+                                <li class="list-group-item">Rua Tiradentes, 2840</li>
+                                <li class="list-group-item">Rua Tiradentes, 2930</li>
+                                <li class="list-group-item">Rua Mons. João Rodrigues Guimarães, 107</li>
+                                <li class="list-group-item">Av. Babita Camargos, 438 | Praça Dos Trabalhadores Sent. Belo Horizonte</li>
+                                <li class="list-group-item">Av. Babita Camargos, 530</li>
+                                <li class="list-group-item">Av. Babita Camargos, 746 | Garagem Cometa</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1819 | Previdência Social</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1042 | Praça João XXIII</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 380 | General Electric</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 4464 | Itaú Power Shopping Sentido Metrô/Eldorado</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1800 | Leroy Merlin Sentido Estação Eldorado</li>
+                                <li class="list-group-item">Estação Eldorado | Plataforma B7</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1805 | Leroy Merlin</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1000 | Mcdonald's</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 180</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 730 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 980 | Upa Jk</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1520 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2364 | Habib'S/Galeria Eldorado Center</li>
+                                <li class="list-group-item">Avenida João César De Oliveira, 2694 - Drogaria Araújo</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 90</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 230</li>
+                                <li class="list-group-item">Rua Haia, 112</li>
+                                <li class="list-group-item">Av. Londres, 384</li>
+                                <li class="list-group-item">Av. Londres, 680</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2452</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2660</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2370</li>
+                                <li class="list-group-item">Rua Caiapó, 487</li>
+                                <li class="list-group-item">Rua Corcovado, 590</li>
+                                <li class="list-group-item">Rua Corcovado, 850</li>
+                                <li class="list-group-item">Rua Corcovado, 1136</li>
+                                <li class="list-group-item">Rua Corcovado, 1286</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1770</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1954</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1805</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1555</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1155</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 274</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 108</li>
+                                <li class="list-group-item">Rua Otília Costa Peres, 485</li>
+                                <li class="list-group-item">Rua Otília Costa Peres, 395</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 523</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 339</li>
+                                <li class="list-group-item">Rua Eugênia Sá Fortes, 213</li>
+                                <li class="list-group-item">Rua 16, 150</li>
+                                <li class="list-group-item">Av. José Diniz E Silva, 418</li>
+                                <li class="list-group-item">Av. José Diniz E Silva, 670</li>
+                                <li class="list-group-item">Rua Professor Aureliano Zanon, 400</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 5315</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1100</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1500</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1638</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 2027</li>
+                                <li class="list-group-item">Rua Pe. José Maria De Man, 1775</li>
+                                <li class="list-group-item">Rua Corcovado, 1227</li>
+                                <li class="list-group-item">Rua Corcovado, 941</li>
+                                <li class="list-group-item">Rua Corcovado, 581</li>
+                                <li class="list-group-item">Rua Caiapó, 450</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 365</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 105</li>
+                                <li class="list-group-item">Av. Londres, 755</li>
+                                <li class="list-group-item">Av. Londres, 431</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3359 | Caixa Econômica Federal</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2959 | Centro De Consultas Especializadas Íria Diniz</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2733 | Correios</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2477 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1215 | Big Shopping</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 881 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 6133 Com Av. João César De Oliveira</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 5875 | Correios</li>
+                                <li class="list-group-item">Rua Marechal Hermes Da Fonseca, 323</li>
+                                <li class="list-group-item">Rua Marechal Hermes Da Fonseca, 73</li>
+                                <li class="list-group-item">Estação Eldorado | Plataforma C3</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 5100 | Belgo 1 (Oposto Ao Itaú Shopping)</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 6941 | Belgo 2</li>
+                                <li class="list-group-item">Rua Antônio Gonçalves Neto, 254 - Polícia Rodoviária Federal</li>
+                                <li class="list-group-item">Av. Babita Camargos, 745 | Praça Da Cemig Sentido Industrial</li>
+                                <li class="list-group-item">Av. Babita Camargos, 463 | Espaço Vip</li>
+                                <li class="list-group-item">Av. Babita Camargos, 131 | Praça Dos Trabalhadores Sent. Industrial</li>
+                                <li class="list-group-item">Rua Mons. João Rodrigues Guimarães, 168</li>
+                                <li class="list-group-item">Rua Tiradentes, 3279</li>
+                                <li class="list-group-item">Rua Tiradentes, 2927 | Bailão Farrinha</li>
+                                <li class="list-group-item">Rua Tiradentes, 2641</li>
+                                <li class="list-group-item">Rua Tiradentes, 2245</li>
+                                <li class="list-group-item">Rua Tiradentes, 2115 | Csu Amazonas</li>
+                                <li class="list-group-item">Rua Tiradentes, 1875</li>
+                                <li class="list-group-item">Rua Tiradentes, 1675 | Madeira Monteiro</li>
+                                <li class="list-group-item">Rua Tiradentes, 1531</li>
+                                <li class="list-group-item">Rua Manjericão, 343</li>
+                                <li class="list-group-item">Rua Manjericão, 644</li>
+                                <li class="list-group-item">Rua Manjericão, 886</li>
+                                <li class="list-group-item">Rua Manjericão, 1050</li>
+                                <li class="list-group-item">Rua Santa Maria, 1509</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 38</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 222</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 276</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 482</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 732 | Praça Zulmira Campos Sent. Palmares</li>
+                                <li class="list-group-item">Rua Cel. Durval De Barros, 944</li>
+                                <li class="list-group-item">Av. Braz Júlio De Oliveira, 268</li>
+                                <li class="list-group-item">Avenida Marechal Hermes, 2-200</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 282 | 48º Batalhão Da Polícia Militar</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 426 | Auto Escola Strada</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 702 | Escola Estadual Jk Sentido Palmares</li>
+                                <li class="list-group-item">Av. Mal. Hermes, 958 | Supermercado Bh</li>
+                                <li class="list-group-item">Rua Ladainha, 122</li>
+                                <li class="list-group-item">Rua Ladainha, 266</li>
+                                <li class="list-group-item">Rua Ladainha, 494</li>
+                                <li class="list-group-item">Rua Ladainha, 626</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 600</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 891 | Escola Estadual João Ferreira De Freitas(Neec)</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 772</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 606a</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 343</li>
+                                <li class="list-group-item">Rua Bela Petruschi, 147</li>
+                                <li class="list-group-item">Avenida Das Acácias, 820</li>
+                                <li class="list-group-item">Avenida Das Acácias, 892</li>
+                                <li class="list-group-item">Rua Jequitibá, 368</li>
+                                <li class="list-group-item">Rua Antônio Germano, 1115</li>
+                                <li class="list-group-item">Rua Antônio Germano, 1017</li>
+                                <li class="list-group-item">Rua Antônio Germano, 845</li>
+                                <li class="list-group-item">Rua Antônio Germano, 655</li>
+                                <li class="list-group-item">Avenida Sanitária | Ponto Final Do Palmares 2ª Seção </li>
+
+                            </ul>
+                            <ul id="ul2580" class="list-group  hide">
+                                <label class="ul2580 hide classlabel">Linha 2580</label>
+                                <li class="list-group-item"> Av. Doutor João Augusto Fonseca E Silva, 48 | Ponto Final Das Linhas 2580 E 2581 No Eldorado</li>
+                                <li class="list-group-item">Av. Doutor João Augusto Fonseca E Silva, 224</li>
+                                <li class="list-group-item">Rua Tapijara, 1053</li>
+                                <li class="list-group-item">Rua Tapijara, 849</li>
+                                <li class="list-group-item">Rua Tapijara, 641</li>
+                                <li class="list-group-item">Rua Possuá, 542 Com R. Nossa Sra. Da Conceição</li>
+                                <li class="list-group-item">Av. Doutor Cincinato Cajado Braga, 451</li>
+                                <li class="list-group-item">Av. Doutor Cincinato Cajado Braga, 259</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 230</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3359 | Caixa Econômica Federal</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2959 | Centro De Consultas Especializadas Íria Diniz</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2733 | Correios</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2477 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1215 | Big Shopping</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 881 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 307</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 151</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 5100 | Belgo 1 (Oposto Ao Itaú Shopping)</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 4464 | Itaú Power Shopping Sentido Metrô/Eldorado</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1800 | Leroy Merlin Sentido Estação Eldorado</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 7791 | Acesso A Est. Eldorado</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 320 | Residencial Resort Mundi Sentido Centro</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 6275</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 5629</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 5059</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 3333</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 2855</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 2101</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 4369</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 2775</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 2157</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 2001</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 1137</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 721</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 645</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 47</li>
+                                <li class="list-group-item">Av. Do Contorno, 10080 | Boulevard Contorno - Passarela Carlos Prates</li>
+                                <li class="list-group-item">Av. Do Contorno, 10500 | Boulevard Contorno - Hospital Socor 2</li>
+                                <li class="list-group-item">Av. Do Contorno, 10706 | Boulevard Contorno - Paracatu</li>
+                                <li class="list-group-item">Av. Do Contorno, 11380 | Shopping Tupinambás 1</li>
+                                <li class="list-group-item">Av. Olegário Maciel, 151 | Sesc Olegário Maciel 2</li>
+                                <li class="list-group-item">Rua Dos Caetés, 343 | Shopping Tocantins 3</li>
+                                <li class="list-group-item">Av. Dos Andradas, 478 | Boulevard Arrudas Tupinambás 2</li>
+                                <li class="list-group-item">Av. Dos Andradas, 920 | Parque Municipal 6</li>
+                                <li class="list-group-item">Av. Dos Andradas, 1220 | Ministério Da Agricultura</li>
+                                <li class="list-group-item">Av. Prof. Alfredo Balena, 110 | Faculdade De Medicina Ufmg 1</li>
+                                <li class="list-group-item">Rua Dos Guajajaras, 172 | Edifício Solar 2</li>
+                                <li class="list-group-item">Av. Augusto De Lima, 270 | Imprensa Oficial 1</li>
+                                <li class="list-group-item">Av. Augusto De Lima, 580 | Mercado Central</li>
+                                <li class="list-group-item">Rua Dos Goitacazes, 778 Com Av. Amazonas 2</li>
+                                <li class="list-group-item">Av. Augusto De Lima, 1126 | Primeira Igreja Batista 2</li>
+                                <li class="list-group-item">Av. Augusto De Lima, 1504 | Fórum Lafayette 2</li>
+                                <li class="list-group-item">Av. Augusto De Lima, 1800 | Instituto De Criminalística 2</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 368</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 634</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 790</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 1036</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 1488</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 2070</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 2310 | Localiza</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 2878 | Posto Petrobrás</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 3000 | Minas Rural</li>
+                                <li class="list-group-item">Av. Teresa Cristina, 3200 | Pátio Bhtrans/Senai</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 3300</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 2964 - Passarela Estação Gameleira</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 111</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 4200</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 4610</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 5058</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 5450</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 6814</li>
+                                <li class="list-group-item">Av. Pres. Juscelino Kubitschek, 7744 | Viaduto Do Água Branca</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1805 | Leroy Merlin</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1000 | Mcdonald's</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 180</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 730 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 980 | Upa Jk</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1520 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2364 | Habib'S/Galeria Eldorado Center</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2858 - Lojas Rede</li>
+                                <li class="list-group-item">Pça. Dr. Paulo Pinheiro Chagas, 90</li>
+                                <li class="list-group-item">Av. Doutor Cincinato Cajado Braga, 200</li>
+                                <li class="list-group-item">Av. Doutor Cincinato Cajado Braga, 440</li>
+                                <li class="list-group-item">Rua Possuá, 467 Com R. Tapijara</li>
+                                <li class="list-group-item">Rua Tapijara, 588</li>
+                                <li class="list-group-item">Rua Tapijara, 822</li>
+                                <li class="list-group-item">Rua Tapijara, 1012</li>
+                                <li class="list-group-item">Av. Doutor João Augusto Fonseca E Silva, 335</li>
+                                <li class="list-group-item">Av. Doutor João Augusto Fonseca E Silva, 48 | Ponto Final Das Linhas 2580 E 2581 No Eldorado </li>
+
+                            </ul>
+                            <ul id="ul2730" class="list-group  hide">
+                                <label class="ul2730 hide classlabel">Linha 2730</label>
+                                <li class="list-group-item"> Rua A, 157 | Ponto Final Da Linha 2730 No Fonte Grande</li>
+                                <li class="list-group-item">Av. Prefeito Gil Diniz, 260</li>
+                                <li class="list-group-item">Av. Prefeito Gil Diniz, 186</li>
+                                <li class="list-group-item">Rua Domingos Do Sítio, 363</li>
+                                <li class="list-group-item">Rua Domingos Do Sítio, 159</li>
+                                <li class="list-group-item">Rua Acilino Diniz Moreira, 270</li>
+                                <li class="list-group-item">Rua Sinfrônio De Souza E Silva, 250</li>
+                                <li class="list-group-item">Rua Joaquim José, 2472</li>
+                                <li class="list-group-item">Rua Santo Antônio, 735</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 109</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 275</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4747 | Puc Minas Campus Contagem, Acesso 2</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4655 | Parque Fernão Dias</li>
+                                <li class="list-group-item">Rua Rio Comprido, 4585 | Puc Minas Campus Contagem, Acesso 5</li>
+                                <li class="list-group-item">Rua 7, 14 | Sentido Bairro</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1805</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 1555</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 1109</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 1055</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 995</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 1177</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 2751</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 1737</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 3131</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 4321 | Hospital Municipal Sentido Eldorado</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 4035</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3741 Com Av. Londres</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3359 | Caixa Econômica Federal</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2959 | Centro De Consultas Especializadas Íria Diniz</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2733 | Correios</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2477 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1215 | Big Shopping</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 881 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 6133 Com Av. João César De Oliveira</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 5875 | Correios</li>
+                                <li class="list-group-item">Rua Mal. Costa E Silva, 299 | Upa Jk</li>
+                                <li class="list-group-item">Rua Mal. Costa E Silva, 149</li>
+                                <li class="list-group-item">Estação Eldorado | Ponto 4 - Sentido Cid. Industrial/Barreiro</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 5774 - Sentido Cidade Industrial</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 307</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 151</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1225 | Magotteaux</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1505 | Hyundai</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1359 | Itambé</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1819 | Previdência Social</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1042 | Praça João XXIII</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 9407 | Estamparia</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 5547</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 270</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 604</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 856</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 1136 | Hospital Santa Rita</li>
+                                <li class="list-group-item">Av. Olinto Meireles, 304 | Vallourec</li>
+                                <li class="list-group-item">Av. Sinfrônio Brochado, 196</li>
+                                <li class="list-group-item">Av. Visc. De Ibituruna, 187</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 250 | Tre Barreiro</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 640 | Viashopping Barreiro</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 1000 | Praça Cristo Reina</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 1256 | Puc Minas Campus Barreiro</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 1730 | Villefort Atacadista</li>
+                                <li class="list-group-item">Av. Do Canal, 53</li>
+                                <li class="list-group-item">Av. Do Canal, 313</li>
+                                <li class="list-group-item">Rua Antônio Eustáquio Piazza, 2514 | Apoio Mineiro</li>
+                                <li class="list-group-item">Av. Nélio Cerqueira, 124</li>
+                                <li class="list-group-item">Av. Nélio Cerqueira, 270</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 116</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 412</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 132</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 5213</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 5123</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 4997</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 4701</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 4644</li>
+                                <li class="list-group-item">Estação Diamante | Plataforma E4</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 4653</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 4996</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 5120</li>
+                                <li class="list-group-item">Av. Waldyr Soeiro Emrich, 5210</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 96</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 405</li>
+                                <li class="list-group-item">Av. Sen. Levindo Coelho, 127</li>
+                                <li class="list-group-item">Av. Nélio Cerqueira, 151</li>
+                                <li class="list-group-item">Rua Antônio Eustáquio Piazza, 77 | Apoio Mineiro</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 2317</li>
+                                <li class="list-group-item">Av. Afonso Vaz De Melo, 1535 | Villefort Atacadista</li>
+                                <li class="list-group-item">Av. Sinfrônio Brochado, 1281 | Colégio São Paulo Da Cruz</li>
+                                <li class="list-group-item">Av. Sinfrônio Brochado, 1053 | Comercial Esporte Clube</li>
+                                <li class="list-group-item">Av. Sinfrônio Brochado, 555</li>
+                                <li class="list-group-item">Av. Sinfrônio Brochado, 91 |Banco Itaú, Hanbai Motos</li>
+                                <li class="list-group-item">Av. Olinto Meireles, 321 | Vallourec</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 1165 | Hospital Santa Rita</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 905 | Hospital São José</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 651</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 393</li>
+                                <li class="list-group-item">Av. Tito Fulgêncio, 65</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 831 | Antiga Fábrica Da Aymoré</li>
+                                <li class="list-group-item">Rua Antônio Gonçalves Neto, 254 - Polícia Rodoviária Federal</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1370 | Cemig</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1000 | Mcdonald's</li>
+                                <li class="list-group-item">Av. Mal. Castelo Branco, 645</li>
+                                <li class="list-group-item">Rua Delfim Moreira, 134</li>
+                                <li class="list-group-item">Rua Mal. Costa E Silva, 299 | Upa Jk</li>
+                                <li class="list-group-item">Rua Mal. Costa E Silva, 149</li>
+                                <li class="list-group-item">Estação Eldorado | Ponto 3 - Sentido Bairro</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 5982- Sentido Av. João César</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 730 | E.E. Firmo De Matos</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 980 | Upa Jk</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 1520 | Cartório Nogueira</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2364 | Habib'S/Galeria Eldorado Center</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 2858 - Lojas Rede</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3142 | Praça Paulo Pinheiro</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3452 | Hotel Amsterdam</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 3782 | Hospital Municipal Sentido Centro De Contagem</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 3132</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 1738</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 2752</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 2500</li>
+                                <li class="list-group-item">Avenida Trajano De Araújo Viana, 994</li>
+                                <li class="list-group-item">Rua Santiago Balesteiros, 720-850</li>
+                                <li class="list-group-item">Av. Sócrates Mariani Bitencourt, 1109</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1555</li>
+                                <li class="list-group-item">Rua Américo Santiago Piacenza, 1155</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 274</li>
+                                <li class="list-group-item">Rua Manoel Pereira Mendes, 108</li>
+                                <li class="list-group-item">Rua Santo Antônio, 738</li>
+                                <li class="list-group-item">Rua Joaquim José, 1455</li>
+                                <li class="list-group-item">Rua Sinfrônio De Souza E Silva, 249</li>
+                                <li class="list-group-item">Rua Acilino Diniz Moreira, 257</li>
+                                <li class="list-group-item">Rua Domingos Do Sítio, 180</li>
+                                <li class="list-group-item">Rua Domingos Do Sítio, 296</li>
+                                <li class="list-group-item">Av. Prefeito Gil Diniz, 195</li>
+                                <li class="list-group-item">Av. Prefeito Gil Diniz, 98</li>
+                                <li class="list-group-item">Rua A, 90-156</li>
+                                <li class="list-group-item">Rua C, 140</li>
+                                <li class="list-group-item">Rua C, 250</li>
+                                <li class="list-group-item">Rua B, 51</li>
+                                <li class="list-group-item">Rua A, 157 | Ponto Final Da Linha 2730 No Fonte Grande </li>
+
+                            </ul>
+                            <ul id="ul7900" class="list-group hide">
+                                <label class="ul7900 hide classlabel">Linha 7900</label>
+                                <li class="list-group-item">Rua Rio Comprido, 3644 | Ponto Final Das Linhas 7900 E 7905 No Santa Cruz</li>
+                                <li class="list-group-item">Rua Rio Comprido, 3305</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2345</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2645</li>
+                                <li class="list-group-item">Avenida Lisboa, 150</li>
+                                <li class="list-group-item">Av. Lisboa, 282</li>
+                                <li class="list-group-item">Praça Paris, 35-67</li>
+                                <li class="list-group-item">Rua Mônaco, 102</li>
+                                <li class="list-group-item">Rua Mônaco, 290</li>
+                                <li class="list-group-item">Rua Pompéia, 225</li>
+                                <li class="list-group-item">Rua Orleans, 465</li>
+                                <li class="list-group-item">Av. Pedro Olímpio Da Fonseca, 345</li>
+                                <li class="list-group-item">Rua Espanha, 220</li>
+                                <li class="list-group-item">Rua Espanha, 396</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 2227</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 2079</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1765</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1491</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1195</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1105 | Procon Contagem Sentido Metrô</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 899</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 613</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 235</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 95</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 307</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 151</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1225 | Magotteaux</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1505 | Hyundai</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1359 | Itambé</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1819 | Previdência Social</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1042 | Praça João XXIII</li>
+                                <li class="list-group-item">Av. Amazonas, 9355 | Praça Louis Ensch - Vilma Alimentos</li>
+                                <li class="list-group-item">Av. Amazonas, 8755 | Cardiesel</li>
+                                <li class="list-group-item">Av. Amazonas, 8355</li>
+                                <li class="list-group-item">Av. Amazonas, 7655 | Cefet-Mg Campus II</li>
+                                <li class="list-group-item">Av. Amazonas, 7055 | E.E. Ordem E Progresso</li>
+                                <li class="list-group-item">Av. Amazonas, 6955 | Colégio Salesiano</li>
+                                <li class="list-group-item">Av. Amazonas, 6555 | 5º Batalhão De Polícia Militar</li>
+                                <li class="list-group-item">Av. Amazonas, 6255 | Hospital Sarah Kubitschek/Bptran/Expominas</li>
+                                <li class="list-group-item">Av. Amazonas, 5955 | Cefet-Mg Campus Vi/Parque De Exposições Da Gameleira</li>
+                                <li class="list-group-item">Av. Amazonas, 5455</li>
+                                <li class="list-group-item">Av. Amazonas, 5355</li>
+                                <li class="list-group-item">Av. Amazonas, 5055 | Cefet-Mg Campus I</li>
+                                <li class="list-group-item">Av. Amazonas, 3555</li>
+                                <li class="list-group-item">Avenida Amazonas, 3045</li>
+                                <li class="list-group-item">Avenida Amazonas, 2585 | Amazonas Com Contorno</li>
+                                <li class="list-group-item">Av. Amazonas, 2311 | Hospital Sos 1</li>
+                                <li class="list-group-item">Av. Amazonas, 1727 | Colégio Santo Agostinho 2</li>
+                                <li class="list-group-item">Av. Amazonas, 885 | Conj. Cidade De Belo Horizonte 1</li>
+                                <li class="list-group-item">Av. Amazonas, 265 | Praça Sete/Cine Brasil 3</li>
+                                <li class="list-group-item">Av. Dos Andradas, 652 | Parque Municipal 2</li>
+                                <li class="list-group-item">Av. Dos Andradas, 920 | Parque Municipal 6</li>
+                                <li class="list-group-item">Rua Ceará, 120 | Upa Centro-Sul</li>
+                                <li class="list-group-item">Av. Prof. Alfredo Balena, 192 | Hospital De Pronto Socorro João XXIII</li>
+                                <li class="list-group-item">Al. Ezequiel Dias, 427 | Hemominas 2</li>
+                                <li class="list-group-item">Av. Dos Andradas, 391 | Edifício Central 2</li>
+                                <li class="list-group-item">Rua Dos Guaicurus, 244 | Escola De Engenharia 2</li>
+                                <li class="list-group-item">Rua Dos Guaicurus, 500 Com Rua Rio De Janeiro 2</li>
+                                <li class="list-group-item">Av. Do Contorno, 43 | Restaurante Popular 2</li>
+                                <li class="list-group-item">Rua Dos Tupinambás, 1017 | Senac 3</li>
+                                <li class="list-group-item">Av. Olegário Maciel, 740 | Mercado Novo 2</li>
+                                <li class="list-group-item">Av. Amazonas, 1700 | Colégio Santo Agostinho 4</li>
+                                <li class="list-group-item">Av. Amazonas, 1922 | Hospital Universitário Ciências Médicas 2</li>
+                                <li class="list-group-item">Av. Amazonas, 2474 | Orquestra Filarmônica 1</li>
+                                <li class="list-group-item">Av. Amazonas, 2900a</li>
+                                <li class="list-group-item">Av. Amazonas, 3100</li>
+                                <li class="list-group-item">Av. Amazonas, 3500</li>
+                                <li class="list-group-item">Av. Amazonas, 3800</li>
+                                <li class="list-group-item">Av. Amazonas, 4500</li>
+                                <li class="list-group-item">Av. Amazonas, 5100 | Cefet-Mg Campus I</li>
+                                <li class="list-group-item">Av. Amazonas, 5600</li>
+                                <li class="list-group-item">Av. Amazonas, 6020 | Parque De Exposições Da Gameleira/Cefet-Mg Campus VI</li>
+                                <li class="list-group-item">Av. Amazonas, 6200 | Expominas/Hospital Sarah Kubitschek/5º Batalhão Pmmg</li>
+                                <li class="list-group-item">Av. Amazonas, 6500 | 5º Batalhão De Polícia Militar</li>
+                                <li class="list-group-item">Av. Amazonas, 7100 | E.E. Ordem E Progresso</li>
+                                <li class="list-group-item">Av. Amazonas, 7500 | Cefet-Mg Campus II</li>
+                                <li class="list-group-item">Av. Amazonas, 8400 | Universal</li>
+                                <li class="list-group-item">Av. Amazonas, 8700</li>
+                                <li class="list-group-item">Av. Amazonas, 9600 | Praça Louis Ensch - Ceresp Contagem - Magnesita</li>
+                                <li class="list-group-item">Av. Cardeal Eugênio Pacelli, 1145 | General Electric</li>
+                                <li class="list-group-item">Rua Antônio Gonçalves Neto, 254 - Polícia Rodoviária Federal</li>
+                                <li class="list-group-item">Av. Babita Camargos, 1370 | Cemig</li>
+                                <li class="list-group-item">Av. Gal. David Sarnoff, 1000 | Mcdonald's</li>
+                                <li class="list-group-item">Av. João César De Oliveira, 180</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 90</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 370</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 562</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 878</li>
+                                <li class="list-group-item">Avenida José Faria Da Rocha, 980 | Procon Contagem</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1146</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1330</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1636</li>
+                                <li class="list-group-item">Av. José Faria Da Rocha, 1912</li>
+                                <li class="list-group-item">Rua Buganville, 1810</li>
+                                <li class="list-group-item">Rua Inglaterra, 227</li>
+                                <li class="list-group-item">Av. Pedro Olímpio Da Fonseca, 130</li>
+                                <li class="list-group-item">Av. Pedro Olímpio Da Fonseca, 338</li>
+                                <li class="list-group-item">Av. Pedro Olímpio Da Fonseca, 494</li>
+                                <li class="list-group-item">Rua Orleans, 460</li>
+                                <li class="list-group-item">Rua Pompéia, 214</li>
+                                <li class="list-group-item">Rua Mônaco, 303</li>
+                                <li class="list-group-item">Rua Mônaco, 87</li>
+                                <li class="list-group-item">Pça. Paris, 357</li>
+                                <li class="list-group-item">Av. Lisboa, 189</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2452</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2660</li>
+                                <li class="list-group-item">Rua Rio Comprido, 2370</li>
+                                <li class="list-group-item">Rua Rio Comprido, 3000 | Escola Sesi Leonor Franco</li>
+                                <li class="list-group-item">Rua Rio Comprido, 3300</li>
+                                <li class="list-group-item">Rua Rio Comprido, 3644 | Ponto Final Das Linhas 7900 E 7905 No Santa Cruz</li>
+                                
+                            </ul>
+                            
+                            
+                        </body>
+                        <script>                        
+                            // da pra alterar , so precisa arrumar o parametro
+                            var aux = null
+                            function mostrarRota() {
+                                limparTabela();
+                                var linha = document.getElementById('horariosinput').value;                                                              
+                                if(!validar())
+                                {                                                                    
+                                    document.querySelector('#ul'+linha).style.display = "block"   
+                                    document.querySelector('.ul'+linha).style.display = "block"                                  
+                                    aux=linha;
+                                    limparListBox();                                                                                                                                              
+                                }                                       
+                            }
+                            
+                            function mostrarRotas() {
+                                var hor = document.getElementById('horariosinput').value;
+                                var dia = document.getElementById('diasinput').value;                              
+                                if(!validar())
+                                {
+                                    
+                                    var tbody = document.querySelector('#tabela'+hor+dia);
+                                    document.querySelector('#tabela'+hor+dia).style.display = "block"
+                                    document.querySelector('.tabela'+hor+dia).style.display = "block"
+                                    aux=hor+dia;
+                                    limparListBox();                                                                                                                                              
+                                }                                       
+                            }
+                            
+                            function limparListBox()
+                            {                                                                             
+                                document.getElementById('horariosinput').value='';
+                                
+                            }    
+                            function limparTabela()
+                            {
+                                var x = document.querySelectorAll('.hide');
+                                for(let i =0;i<x.length;i++)
+                                x[i].style.display="none";
+                            }
+                            function validar(){
+                                var hor = document.getElementById("horariosinput");                               
+                                var error = false;
+                                if(document.getElementById("horariosinput").value=='')
+                                {
+                                    document.getElementById("horariosinput").style="border:1px solid red";
+                                    error = true;
+                                }
+                                else
+                                hor.style="";
+                                
+                                return error;
+                            }
+                            
+                        </script>
+                        </html>

@@ -1,0 +1,30 @@
+.hide
+{ 
+    
+    display: none
+}
+
+#corpo
+{
+    background-color: #989db4;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+#topo
+{
+    text-align: center;
+}
+.btnp
+{
+  margin-top: 37px;
+}
+.btnq
+{
+  margin-top: 15px;
+}
+.classlabel
+{
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
